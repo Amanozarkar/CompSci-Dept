@@ -1,0 +1,35 @@
+[
+  {
+    "email": "teacher@school.com",
+    "password": "teach123",
+    "name": "John Doe",
+    "role": "teacher"
+  },
+  {
+    "email": "student@school.com",
+    "password": "learn123",
+    "name": "Jane Smith",
+    "role": "student"
+  },
+  {
+    "name": "Aman Ozarkar",
+    "email": "amanozarkar8182@gmail.com",
+    "password": "aman123",
+    "role": "student",
+    "createdAt": "2025-08-06T17:29:01.566Z"
+  },
+  {
+    "name": "Rohidas Ozarkar",
+    "email": "rohidasozarkar8182@gmail.com",
+    "password": "rohidas123",
+    "role": "student",
+    "createdAt": "2025-08-06T17:32:31.463Z"
+  },
+  {
+    "name": "Rohidas Ozarkar",
+    "email": "rohidasozarkar8182@gmai.com",
+    "password": "rohidas123",
+    "role": "student",
+    "createdAt": "2025-08-08T05:13:16.912Z"
+  }
+]

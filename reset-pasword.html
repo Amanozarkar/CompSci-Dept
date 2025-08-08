@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password | School App</title>
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+    <div class="reset-container">
+        <div class="reset-card">
+            <div class="reset-header">
+                <h2>Reset Password</h2>
+                <p id="reset-subtitle">Enter your email to receive a reset link</p>
+            </div>
+            
+            <form id="requestResetForm" class="reset-form">
+                <div id="reset-error" class="error-message"></div>
+                <div id="reset-success" class="success-message"></div>
+                
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <input type="email" id="resetEmail" required>
+                        <label for="resetEmail">Email</label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="reset-btn">Send Reset Link</button>
+                
+                <div class="back-to-login">
+                    <a href="login.html">Back to Login</a>
+                </div>
+            </form>
+            
+            <form id="newPasswordForm" class="reset-form" style="display: none;">
+                <div id="password-error" class="error-message"></div>
+                <div id="password-success" class="success-message"></div>
+                
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <input type="password" id="newPassword" required>
+                        <label for="newPassword">New Password</label>
+                    </div>
+                    <div id="password-requirements" class="requirements"></div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <input type="password" id="confirmPassword" required>
+                        <label for="confirmPassword">Confirm Password</label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="reset-btn">Update Password</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="reset.js"></script>
+</body>
+</html>

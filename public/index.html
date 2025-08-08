@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+       <!-- Modern Header Design -->
+       <header class="clean-header">
+         <div class="header-container">
+           <div class="logo-wrapper">
+             <div class="logo-icon">
+               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" 
+                       stroke="#3b82f6" stroke-width="2" fill="none" stroke-linecap="round"/>
+               </svg>
+             </div>
+             <div class="logo-text">
+               <h1>Computer Science</h1>
+               <p>Department Portal</p>
+             </div>
+           </div>
+           <div class="header-actions">
+             <a href="/signin" class="sign-in-btn">
+               <i class="fas fa-sign-in-alt"></i>
+               Sign Out
+             </a>
+           </div>
+         </div>
+       </header>
+
+        <!-- Home Page -->
+        <div class="app-content active" id="home-page">
+            <div class="welcome-container">
+                <div>
+                    <div class="card">
+                        <div class="section-title">Welcome</div>
+                        <div class="welcome-message">"You are the future of our community. We're committed to providing the best education for all our students."</div>
+                        <div class="welcome-from">- Dr.S.S.Chowhan(HOD CompSci)</div>
+                    </div>
+                    
+                    <!-- Grayscale Carousel -->
+                    <div class="carousel-container">
+                        <div class="carousel">
+                            <div class="carousel-slide">
+                                <img src="slide2.jpg" alt="School building" class="carousel-img">
+                                <div class="carousel-caption"></div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="slide1.jpg" alt="Students learning" class="carousel-img">
+                                <div class="carousel-caption"></div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="slide3.jpg" alt="Classroom" class="carousel-img">
+                                <div class="carousel-caption"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-nav">
+                            <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                            <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="carousel-indicators">
+                            <div class="carousel-indicator active"></div>
+                            <div class="carousel-indicator"></div>
+                            <div class="carousel-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- NOTICE BOARD SECTION -->
+                <div class="notice-board">
+                    <h3><i class="fas fa-bullhorn"></i> Notice Board</h3>
+                    
+                    <div class="notice-items-container">
+                        <!-- Assignment Notice -->
+                        <div class="notice-item">
+                            <div class="notice-header">
+                                <h4 class="notice-title">Data Science Assignment - 1</h4>
+                                <span class="notice-date"> Due: August 11</span>
+                            </div>
+                            <div class="notice-teacher">
+                                <i class="fas fa-user-tie"></i> Posted by: Dr. S.S. Chowhan
+                            </div>
+                            <div class="notice-content">
+                                Submit your Assignment Before The Due Date.
+                            </div>
+                            <div class="notice-attachments">
+                                <a href="assignment.pdf" class="attachment pdf" download="DataScience_Assignment1.pdf">
+                                    <i class="fas fa-file-pdf"></i> Download Assignment PDF
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Exam Notice -->
+                        <div class="notice-item">
+                            <div class="notice-header">
+                                <h4 class="notice-title">Midterm Exams</h4>
+                                <span class="notice-date"></span>
+                            </div>
+                            <div class="notice-teacher">
+                                <i class="fas fa-user-tie"></i> Posted by: Exam Office
+                            </div>
+                            <div class="notice-content">
+                                Exams begin next Monday. Check your schedule for room allocations.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="new-notice-btn">
+                        <i class="fas fa-plus"></i> Post New Notice
+                    </button>
+                </div>
+                <!-- END NOTICE BOARD -->
+            </div>
+            
+            <div class="card">
+                <div class="section-title">Upcoming Events</div>
+                <div class="timetable-item">
+                    <div class="subject">Independence Day</div>
+                    <div class="time">At 7:00 AM.</div>
+                </div>
+                <div class="timetable-item">
+                    <div class="time">-</div>
+                    <div class="subject">-</div>
+                </div>
+                <div class="timetable-item">
+                    <div class="time">-</div>
+                    <div class="subject">-</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Timetable Page -->
+        <div class="app-content" id="timetable-page">
+            <div class="card">
+                <div class="section-title">Weekly Timetable</div>
+                
+                <div class="timetable-controls">
+                    <div class="timetable-select">
+                        <select id="year-select">
+                            <option value="">Select Year</option>
+                            <option value="first">First Year</option>
+                            <option value="second">Second Year</option>
+                            <option value="third">Third Year</option>
+                        </select>
+                    </div>
+                    
+                    <div class="timetable-select">
+                        <select id="division-select">
+                            <option value="">Select Division</option>
+                            <option value="A">Division A</option>
+                            <option value="B">Division B</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="timetable-week">
+                    <button class="day-tab active" data-day="monday">Monday</button>
+                    <button class="day-tab" data-day="tuesday">Tuesday</button>
+                    <button class="day-tab" data-day="wednesday">Wednesday</button>
+                    <button class="day-tab" data-day="thursday">Thursday</button>
+                    <button class="day-tab" data-day="friday">Friday</button>
+                    <button class="day-tab" data-day="saturday">Saturday</button>
+                </div>
+                
+                <div class="timetable-container">
+                    <table class="timetable" id="timetable-content">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Subject</th>
+                                <th>Teacher</th>
+                                <th>Room</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Timetable will be loaded here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Teachers Page -->
+        <div class="app-content" id="teachers-page">
+            <div class="card">
+                <div class="section-title">Our Faculty</div>
+                
+                <!-- Computer -->
+                <div class="department-section">
+                    <div class="department-title">
+                        <i class="fa fa-desktop"></i>
+                        Computer Department
+                    </div>
+                    
+                    <div class="hod-info">
+                        <div class="hod-avatar">SSC</div>
+                        <div class="hod-details">
+                            <div class="hod-name">Dr. S.S.Chowhan</div>
+                            <div class="hod-position">Head of Computer Department</div>
+                            <div class="teacher-email">@school.edu</div>
+                        </div>
+                    </div>
+                    
+                    <div id="math-teachers-list">
+                        <!-- Math teachers will be loaded here by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Maths and Stat -->
+                <div class="department-section">
+                    <div class="department-title">
+                        <i class="fas fa-calculator"></i>
+                        Mathematics and Statistics Department
+                    </div>
+                    
+                    <div class="hod-info">
+                        <div class="hod-avatar">RB</div>
+                        <div class="hod-details">
+                            <div class="hod-name">-</div>
+                            <div class="hod-position">Head of Science Department</div>
+                            <div class="teacher-email">xyz@school.edu</div>
+                        </div>
+                    </div>
+                    
+                    <div id="science-teachers-list">
+                        <!-- Science teachers will be loaded here by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Humanities Department -->
+                <div class="department-section">
+                    <div class="department-title">
+                        <i class="fas fa-plug"></i>
+                        Electronics Department
+                    </div>
+                    
+                    <div class="hod-info">
+                        <div class="hod-avatar">MD</div>
+                        <div class="hod-details">
+                            <div class="hod-name">-</div>
+                            <div class="hod-position">Head of Humanities Department</div>
+                            <div class="teacher-email">xyz@school.edu</div>
+                        </div>
+                    </div>
+                    
+                    <div id="humanities-teachers-list">
+                        <!-- Humanities teachers will be loaded here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- More Page -->
+        <div class="app-content" id="more-page">
+            <div class="card">
+                <div class="section-title">My Voice</div>
+                <div class="more-item" id="give-feedback">
+                    <div class="more-icon">
+                        <i class="fas fa-comment-alt"></i>
+                    </div>
+                    <div class="more-text">
+                        <div class="more-title">Give Feedback</div>
+                        <div class="more-desc">Share your thoughts with the school</div>
+                    </div>
+                    <div class="more-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="more-item" id="make-suggestion">
+                    <div class="more-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="more-text">
+                        <div class="more-title">Make a Suggestion</div>
+                        <div class="more-desc">Ideas to improve our school</div>
+                    </div>
+                    <div class="more-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="more-item" id="view-suggestions">
+                    <div class="more-icon">
+                        <i class="fas fa-list"></i>
+                    </div>
+                    <div class="more-text">
+                        <div class="more-title">View Suggestions</div>
+                        <div class="more-desc">See what others have suggested</div>
+                    </div>
+                    <div class="more-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="section-title">Settings</div>
+                <div class="more-item" id="profile-settings">
+                    <div class="more-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <div class="more-text">
+                        <div class="more-title">Profile Settings</div>
+                        <div class="more-desc">Update your personal information</div>
+                    </div>
+                    <div class="more-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="more-item" id="notifications">
+                    <div class="more-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="more-text">
+                        <div class="more-title">Notifications</div>
+                        <div class="more-desc">Manage your notification preferences</div>
+                    </div>
+                    <div class="more-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="more-item" id="logout">
+                    <div class="more-icon">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </div>
+                    <div class="more-text">
+                        <div class="more-title">Logout</div>
+                        <div class="more-desc">Sign out of your account</div>
+                    </div>
+                    <div class="more-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <a href="#" class="nav-item active" data-page="home-page">
+                <i class="fas fa-home nav-icon"></i>
+                <span>Home</span>
+            </a>
+            <a href="#" class="nav-item" data-page="timetable-page">
+                <i class="fas fa-calendar-alt nav-icon"></i>
+                <span>Timetable</span>
+            </a>
+            <a href="#" class="nav-item" data-page="teachers-page">
+                <i class="fas fa-chalkboard-teacher nav-icon"></i>
+                <span>Teachers</span>
+            </a>
+            <a href="#" class="nav-item" data-page="more-page">
+                <i class="fas fa-ellipsis-h nav-icon"></i>
+                <span>More</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Feedback Modal -->
+    <div class="modal" id="feedback-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Give Feedback</div>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="feedback-form">
+                <div class="form-group">
+                    <label class="form-label">Your Role</label>
+                    <select class="form-input" required>
+                        <option value="">Select your role</option>
+                        <option value="student">Student</option>
+                        <option value="teacher">Teacher</option>
+                    </select>
+                </div>
+                
+                <div class="form-group" id="name-field">
+                    <label class="form-label">Your Name (optional)</label>
+                    <input type="text" class="form-input" placeholder="Enter your name if you want to be identified">
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" class="form-checkbox" id="anonymous-checkbox">
+                        Submit anonymously
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Feedback Type</label>
+                    <select class="form-input" required>
+                        <option value="">Select type</option>
+                        <option value="compliment">Compliment</option>
+                        <option value="suggestion">Suggestion</option>
+                        <option value="concern">Concern</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Your Feedback</label>
+                    <textarea class="form-textarea" placeholder="Please share your thoughts..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Suggestion Modal -->
+    <div class="modal" id="suggestion-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Make a Suggestion</div>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="suggestion-form">
+                <div class="form-group">
+                    <label class="form-label">Your Role</label>
+                    <select class="form-input" required>
+                        <option value="">Select your role</option>
+                        <option value="student">Student</option>                      
+                        <option value="teacher">Teacher</option>
+                    </select>
+                </div>
+                
+                <div class="form-group" id="suggestion-name-field">
+                    <label class="form-label">Your Name (optional)</label>
+                    <input type="text" class="form-input" placeholder="Enter your name if you want to be identified">
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" class="form-checkbox" id="suggestion-anonymous-checkbox">
+                        Submit anonymously
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Suggestion For</label>
+                    <select class="form-input" required>
+                        <option value="">Select area</option>
+                        <option value="classes">Classes</option>
+                        <option value="facilities">Facilities</option>
+                        <option value="activities">Activities</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Your Suggestion</label>
+                    <textarea class="form-textarea" placeholder="Please share your suggestion..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Submit Suggestion</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- View Suggestions Modal -->
+    <div class="modal" id="view-suggestions-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Recent Suggestions</div>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div id="suggestions-list">
+                <div class="card" style="margin-bottom: 15px;">
+                    <div style="font-weight: 500; margin-bottom: 5px;">More recycling bins</div>
+                    <div style="font-size: 0.9rem; margin-bottom: 5px;">Submitted by: Anonymous Student</div>
+                    <div style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 10px;">Could we have more recycling bins around the school? I notice a lot of recyclable materials going in the regular trash.</div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.8rem;">
+                        <span>For: Facilities</span>
+                        <span>May 10, 2023</span>
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-bottom: 15px;">
+                    <div style="font-weight: 500; margin-bottom: 5px;">Longer lunch breaks</div>
+                    <div style="font-size: 0.9rem; margin-bottom: 5px;">Submitted by: Sarah (Parent)</div>
+                    <div style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 10px;">The current lunch break seems too short for students to eat properly and have some social time.</div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.8rem;">
+                        <span>For: Schedule</span>
+                        <span>April 28, 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+</html>
